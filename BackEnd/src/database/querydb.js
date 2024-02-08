@@ -28,4 +28,28 @@ const createUser = (username, email, password) => {
   return response;
 };
 
-module.exports = { createUser };
+const loginUser = (email, password) => {
+  const result = new Promise((resolve, reject) => {
+    conexion.query(
+      "SELECT * FROM users WHERE email = ?",
+      email,
+      (err, result) => {
+        if (err) {
+          reject(err);
+        }
+
+        const passwordDB = result[0].password;
+
+        if (passwordDB === password) {
+          resolve("Inicio sesion exitoso");
+        } else {
+          reject("Contraseña incorrecta");
+        }
+      }
+    );
+  });
+
+  return result;
+};
+
+module.exports = { createUser, loginUser };
