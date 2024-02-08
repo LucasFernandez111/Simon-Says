@@ -14,6 +14,7 @@ exports.register = async (req, res) => {
 
   try {
     const response = await createUser(username, email, password);
+
     return res.status(200).json({
       status: "OK",
       data: response,
