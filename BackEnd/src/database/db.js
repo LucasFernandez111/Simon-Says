@@ -9,11 +9,11 @@ const conexion = mysql.createConnection({
 
 conexion.connect((err) => {
   if (err) {
-    console.log(err);
+    console.error(err);
     return;
   }
 
-  console.log("Conexion exitosa");
+  console.info("MYSQL conection successful");
 });
 
 module.exports = conexion;
