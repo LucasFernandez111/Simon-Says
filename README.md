@@ -1,4 +1,4 @@
-# Proyecto SimonSays
+<h1 align="center">SIMON SAYS</h1>
 
 
 
