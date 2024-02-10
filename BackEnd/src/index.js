@@ -1,10 +1,15 @@
 const express = require("express");
+require("dotenv").config({ path: "./env/.env" });
+
 const cors = require("cors");
+console.log(process.env.DB_USER);
+
 const cookieParser = require("cookie-parser");
 
 const app = express();
+console.log(process.env.DB_USER);
 const corsOptions = {
-  origin: "http://localhost:5173",
+  origin: true,
   credentials: true,
 };
 app.use(cookieParser());

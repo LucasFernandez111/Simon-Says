@@ -117,7 +117,7 @@ const SimonSays = () => {
 
   useEffect(() => {
     getData();
-  });
+  }, []);
 
   return (
     <div className="flex justify-center items-center flex-col gap-2 bg-neutral-900 w-screen h-screen ">

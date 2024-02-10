@@ -65,9 +65,9 @@ exports.register = async (req, res) => {
 };
 
 exports.isAuth = async (req, res) => {
-  const { id } = await req.cookies.user;
+  const { user } = await req.cookies;
 
-  if (!id) {
+  if (!user.id) {
     return res.status(400).json({
       status: "FAILED",
       data: { error: "No se ha encontrado el usuario" },
@@ -75,7 +75,7 @@ exports.isAuth = async (req, res) => {
   }
 
   try {
-    const response = await getDataUser(id);
+    const response = await getDataUser(user.id);
 
     res.status(200).json({
       status: "OK",
