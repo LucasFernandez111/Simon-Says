@@ -35,7 +35,7 @@
    npm run dev
    ```
 
-   Esto iniciará el servidor de desarrollo del FrontEnd en [http://localhost:3000](http://localhost:3000).
+   Esto iniciará el servidor de desarrollo del FrontEnd en [http://localhost:5173](http://localhost:5173).
 
 2. Para iniciar el servidor del BackEnd, ejecuta:
 
