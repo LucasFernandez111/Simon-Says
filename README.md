@@ -16,15 +16,21 @@
 
    ```bash
    cd FrontEnd
-   npm install
-
-   cd ../BackEnd
+   
+   ```bash
    npm install
    ```
+   ```bash
+   cd ../BackEnd
+   ```
+   ```bash
+   npm install
+   ```
+  
 
-3. Crea un archivo `.env` en el directorio BackEnd y copia las variables de ejemplo del archivo `exampleENV`. Luego, completa las variables según sea necesario.
+4. Crea un archivo `.env` en el directorio BackEnd y copia las variables de ejemplo del archivo `exampleENV`. Luego, completa las variables según sea necesario.
 
-4. Importa el archivo `simonsays.sql` a tu servidor MySQL para crear la base de datos necesaria para el proyecto.
+5. Importa el archivo `simonsays.sql` a tu servidor MySQL para crear la base de datos necesaria para el proyecto.
 
 ## Uso
 
@@ -32,6 +38,8 @@
 
    ```bash
    cd FrontEnd
+   ```
+   ```bash
    npm run dev
    ```
 
@@ -41,6 +49,9 @@
 
    ```bash
    cd BackEnd
+   ```
+
+   ```bash
    node index.js
    ```
 
