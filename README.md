@@ -9,7 +9,7 @@
 1. Clona este repositorio:
 
    ```bash
-   git clone https://url-del-repositorio.git
+   git clone https://github.com/LucasFernandez111/Simon-Says.git
    ```
 
 2. Accede al directorio FrontEnd y Backend y ejecuta `npm install` en cada uno para instalar las dependencias:
