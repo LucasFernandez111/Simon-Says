@@ -27,7 +27,7 @@
    npm install
    ```
   
-4. Importa el archivo `simonsays.sql` a tu servidor MySQL para crear la base de datos necesaria para el proyecto.
+4. Crea una base de datos llamada `simonsays` e importa el archivo `simonsays.sql` que se encuentra en BackEnd/src/database: a tu servidor MySQL para crear la base de datos necesaria para el proyecto.
 
 
 5. En el directorio BackEnd/src/env: crea un archivo llamado `.env`, copia las variables de entorno del archivo `exampleENV` y pégalas en `.env`, completándolas con los datos de tu base de datos. Asegúrate de completar las variables `DB_USER`, `DB_NAME`, `DB_HOST` y `DB_PASSWORD` con la información correspondiente.
