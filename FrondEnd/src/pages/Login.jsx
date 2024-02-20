@@ -17,7 +17,7 @@ const Login = () => {
   const loginUser = async () => {
     try {
       const response = await axios.post("/login", userData);
-      console.log(response);
+      console.info(response);
       navigate("/simonsays");
     } catch (error) {
       setError({ error: true, message: error.response.data.data.error });
