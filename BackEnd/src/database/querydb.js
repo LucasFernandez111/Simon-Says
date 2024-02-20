@@ -3,13 +3,13 @@ const conexion = require("../database/db");
 const createUser = (username, email, password) => {
   const score = 0;
 
-  const result = new Promise((resolve, reject) => {
+  return new Promise((resolve, reject) => {
     conexion.query(
       "SELECT * FROM users WHERE email = ?",
       email,
       (err, result) => {
         if (result.length > 0) {
-          reject("Email already exists");
+          reject("Email ya existente!");
         }
 
         conexion.query(
@@ -25,43 +25,33 @@ const createUser = (username, email, password) => {
       }
     );
   });
-
-  return result;
 };
 
 const loginUser = (email, password) => {
-  const result = new Promise((resolve, reject) => {
+  return new Promise((resolve, reject) => {
     conexion.query(
       "SELECT * FROM users WHERE email = ?",
       email,
       (err, result) => {
-        if (err) {
-          reject(err);
-        }
-
-        const passwordDB = result[0].password;
-
-        if (passwordDB === password) {
+        const userData = result[0];
+        if (result.length > 0 && userData.password === password) {
           resolve({
             message: "Inicio sesion exitoso ",
             data: {
-              id: result[0].id,
-              username: result[0].username,
-              score: result[0].score,
+              id: userData.id,
+              username: userData.username,
+              score: userData.score,
             },
           });
-        } else {
-          reject("Contraseña incorrecta");
         }
+        reject("Los datos proporcionados son inválidos.");
       }
     );
   });
-
-  return result;
 };
 
 const getDataUser = (id) => {
-  const user = new Promise((resolve, reject) => {
+  return new Promise((resolve, reject) => {
     conexion.query("SELECT * FROM users WHERE id = ?", id, (err, result) => {
       if (err) {
         reject(err);
@@ -69,11 +59,10 @@ const getDataUser = (id) => {
       resolve(result[0]);
     });
   });
-  return user;
 };
 
 const updateProgress = (id, score) => {
-  const result = new Promise((resolve, reject) => {
+  return new Promise((resolve, reject) => {
     conexion.query(
       "UPDATE users SET score = ? WHERE id = ?",
       [score, id],
@@ -86,8 +75,6 @@ const updateProgress = (id, score) => {
       }
     );
   });
-
-  return result;
 };
 
 module.exports = { createUser, loginUser, getDataUser, updateProgress };
