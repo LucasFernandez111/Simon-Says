@@ -37,7 +37,7 @@
 1. Para iniciar el servidor de desarrollo del FrontEnd, ejecuta:
 
    ```bash
-   cd FrontEnd
+   cd FrondEnd
    ```
    ```bash
    npm run dev
