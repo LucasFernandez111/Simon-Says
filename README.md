@@ -12,10 +12,10 @@
    git clone https://github.com/LucasFernandez111/Simon-Says.git
    ```
 
-2. Accede al directorio FrontEnd y Backend y ejecuta `npm install` en cada uno para instalar las dependencias:
+2. Accede al directorio Simon-Says, luego a FrondEnd y Backend y ejecuta `npm install` en cada uno para instalar las dependencias:
 
    ```bash
-   cd FrontEnd
+   cd FrondEnd
    ```
    ```bash
    npm install
