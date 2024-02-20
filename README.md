@@ -49,7 +49,7 @@
 2. Para iniciar el servidor del BackEnd, ejecuta:
 
    ```bash
-   cd BackEnd
+   cd BackEnd/src
    ```
 
    ```bash
