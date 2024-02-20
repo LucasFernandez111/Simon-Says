@@ -28,7 +28,7 @@
    ```
   
 
-4. Crea un archivo `.env` en el directorio BackEnd y copia las variables de ejemplo del archivo `exampleENV`. Luego, completa las variables según sea necesario.
+4. Crea un archivo `.env` en el directorio BackEnd/src/env y copia las variables de ejemplo del archivo `exampleENV`. Luego, completa las variables según sea necesario.
 
 5. Importa el archivo `simonsays.sql` a tu servidor MySQL para crear la base de datos necesaria para el proyecto.
 
