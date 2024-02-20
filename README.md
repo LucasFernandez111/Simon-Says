@@ -12,10 +12,10 @@
    git clone https://github.com/LucasFernandez111/Simon-Says.git
    ```
 
-2. Accede al directorio FrontEnd y Backend y ejecuta `npm install` en cada uno para instalar las dependencias:
+2. Accede al directorio Simon-Says, luego a FrondEnd y Backend y ejecuta `npm install` en cada uno para instalar las dependencias:
 
    ```bash
-   cd FrontEnd
+   cd FrondEnd
    ```
    ```bash
    npm install
@@ -27,17 +27,18 @@
    npm install
    ```
   
+4. Crea una base de datos llamada `simonsays` e importa el archivo `simonsays.sql` que se encuentra en BackEnd/src/database: a tu servidor MySQL para crear la base de datos necesaria para el proyecto.
 
-4. Crea un archivo `.env` en el directorio BackEnd y copia las variables de ejemplo del archivo `exampleENV`. Luego, completa las variables según sea necesario.
 
-5. Importa el archivo `simonsays.sql` a tu servidor MySQL para crear la base de datos necesaria para el proyecto.
+5. En el directorio BackEnd/src/env: crea un archivo llamado `.env`, copia las variables de entorno del archivo `exampleENV` y pégalas en `.env`, completándolas con los datos de tu base de datos. Asegúrate de completar las variables `DB_USER`, `DB_NAME`, `DB_HOST` y `DB_PASSWORD` con la información correspondiente.
+
 
 ## Uso
 
 1. Para iniciar el servidor de desarrollo del FrontEnd, ejecuta:
 
    ```bash
-   cd FrontEnd
+   cd FrondEnd
    ```
    ```bash
    npm run dev
@@ -48,7 +49,7 @@
 2. Para iniciar el servidor del BackEnd, ejecuta:
 
    ```bash
-   cd BackEnd
+   cd BackEnd/src
    ```
 
    ```bash
